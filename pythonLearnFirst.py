@@ -144,9 +144,60 @@ print(fruitValSec)
 "CONTROL FLOW"
 "If Dongusu"
 
-ageVal = 18
+electionVal = 2027
+if electionVal == 2027 :
+    print("kurtulma sansin var")
+else :
+    print("kurtulmana son {} yil ".format(int(2027 - electionVal)))
+"Else vs Elif"
+"Eger kosulu devam ettiriyorsak elif kullaniriz. Ettirmiyorsak else."
 
-if ageVal == 18 :
-    print("you are legit")
-else :  
-print("you need a {} ".format(int(18 - ageVal)))
+electionVal = 2027
+if electionVal == 2027 :
+    print("kurtulma sansin var")
+elif electionVal < 2027 :
+    print("kurtulmana son {} yil ".format(int(2027 - electionVal)))
+elif electionVal > 2027 :
+    print("gg") 
+
+"for loop"
+"for dongusu bir diziyi sirayla isleyerek bastirir"
+
+for fruits in fruitVal : 
+    fruits = fruits.title()
+    print(fruits)
+"range()"
+"bir aralikta diziyi okur ve ya yenilenen bir dize olusturur"
+for rangeVal in range(3) :
+    print("test")
+
+for rangeVal in range(0,3):
+    print(rangeVal)
+
+"for ve ici su sekilde okunur = for(baslangic,bitis,oruntu) seklinde okunur"
+"mesela aritmetik bir kume olustursak"
+for rangeVal in range(0, 10 , 2 ): 
+    print(rangeVal)
+
+"bir listeyi for loop ile okumak"
+"mesela her isim soy isim arasinda bir * istiyor olsam sunu yapardim"
+
+userNames = ["Victor Osimhen", "Mauro Icardi" , "Leroy Sane"]
+
+for userNameVal in userNames :
+    userNameVal = userNameVal.replace(" ", "*").lower()
+    print(userNameVal)
+"ve yine bu degeri disaridaki bir print okumaz"
+"For dongusu orijinal bir listeye dokunmaz degisikligi kendi icinde yapar bu yuzden ben disarida da bu degeri okumak istiyorsam bos bir liste olusturmaliyim"
+
+userNamesForLoop = []
+
+for userNamesVal in userNames :
+    userNamesVal = userNamesVal.replace(" ", "*").lower()
+    userNamesForLoop.append(userNamesVal)
+
+print(userNamesForLoop)
+
+"seklinde yeni listeyi de disaridan okuyabilirim"
+
+
