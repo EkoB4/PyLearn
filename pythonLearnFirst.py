@@ -141,4 +141,12 @@ print(sorted(fruitVal))
 fruitValSec = sorted(fruitVal)
 print(fruitValSec)
 
-"""""""""""""""""Data Structures Kismini bitirdim"""
+"CONTROL FLOW"
+"If Dongusu"
+
+ageVal = 18
+
+if ageVal == 18 :
+    print("you are legit")
+else :  
+print("you need a {} ".format(int(18 - ageVal)))
