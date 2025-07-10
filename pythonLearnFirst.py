@@ -198,6 +198,106 @@ for userNamesVal in userNames :
 
 print(userNamesForLoop)
 
-"seklinde yeni listeyi de disaridan okuyabilirim"
+"seklinde yeni dictinoaryide disaridan okuyabilirim"
+
+"key ve isimleri ayni anda nasil cagiririz?"
+
+adminPerson = {'name': "nagme", 'age' : 19}
+print(adminPerson.items())
+
+"Dict ornek amele solituon vs clean code"
+
+"1- amele "
+"TASK : You would like to count the number of fruits in your basket. In order to do this, you have the following dictionary and list of fruits. Use the dictionary and list to count the total number of fruits, but you do not want to count the other items in your basket."
+
+result = 0
+basket_items = {'pears': 5, 'grapes': 19, 'kites': 3, 'sandwiches': 8, 'bananas': 4}
+fruits = ['apples', 'oranges', 'pears', 'peaches', 'grapes', 'bananas']
+fruitsList = {}
+#Iterate through the dictionary
+
+for fruitVal in fruits :
+    fruitsList[fruitVal] = fruitVal #dict. i listeye aktardim
+#if the key is in the list of fruits, add the value (number of fruits) to result
+for itemVal in basket_items.items():
+    print("{}".format(itemVal))
+    itemTotal = basket_items["bananas"] + basket_items["grapes"]
+    print("total fruit {}".format(itemTotal))#toplam meyve sayisi
+
+#If your solution is robust, you should be able to use it with any dictionary of items to count the number of fruits in the basket. Try the loop for each of the dictionaries below to make sure it always works.
+"AMELE KODA BAYBAY CUNKU HEPSINDE BASKET ITEMS DEGISTIRMEK ZORUNDA KALACAGIM BU GIDISLE SIMDI DIREKT CLEAN CODE"
+#Example 1
+
+result = 0
+basket_items = {'pears': 5, 'grapes': 19, 'kites': 3, 'sandwiches': 8, 'bananas': 4}
+fruits = ['apples', 'oranges', 'pears', 'peaches', 'grapes', 'bananas']
+
+# Your previous solution here
+
+for object, itemVal in basket_items.items() :
+    if object in fruits :
+        result += itemVal
+print(result)
+
+#Example 2
+
+result = 0
+basket_items = {'peaches': 5, 'lettuce': 2, 'kites': 3, 'sandwiches': 8, 'pears': 4}
+fruits = ['apples', 'oranges', 'pears', 'peaches', 'grapes', 'bananas']
+
+# Your previous solution here
+
+for object, itemVal in basket_items.items():
+    if object in fruits :
+        result += itemVal
+print(result)
 
 
+#Example 3
+
+result = 0
+basket_items = {'lettuce': 2, 'kites': 3, 'sandwiches': 8, 'pears': 4, 'bears': 10}
+fruits = ['apples', 'oranges', 'pears', 'peaches', 'grapes', 'bananas']
+
+# Your previous solution here
+for object, itemVal in basket_items.items():
+    if object in fruits : 
+        result += itemVal
+print(result)
+
+#while loop
+
+#TASK BU :"Suppose you want to count from some number start_num by another number count_by until you hit a final number end_num. Use break_num as the variable that you'll change each time through the loop. For simplicity, assume that end_num is always larger than start_num and count_by is always positive.
+
+#Before the loop, what do you want to set break_num equal to? How do you want to change break_num each time through the loop? What condition will you use to see when it's time to stop looping?
+
+#After the loop is done, print out break_num, showing the value that indicated it was time to stop looping. It is the case that break_num should be a number that is the first number larger than end_num."
+start_num = 10 
+end_num = 100
+count_by = 10
+
+breakNum = start_num 
+
+while breakNum < end_num :
+    breakNum += count_by
+    print(breakNum)
+
+#Suppose you want to count from some number start_num by another number count_by until you hit a final number end_num, and calculate break_num the way you did in the last quiz.
+#Now in addition, address what would happen if someone gives a start_num that is greater than end_num. If this is the case, set result to "Oops! Looks like your start value is greater than the end value. Please try again." Otherwise, set result to the value of break_num.
+
+if start_num > end_num :
+    while breakNum < end_num :
+        breakNum += count_by
+    else:
+        print("Oops! Looks like your start value is greater than the end value. Please try again.")
+
+#Write a while loop that finds the largest square number less than an integerlimit and stores it in a variable nearest_square. A square number is the product of an integer multiplied by itself, for example 36 is a square number because it equals 6*6.
+#For example, if limit is 40, your code should set the nearest_square to 36.       
+limit = 40
+
+# write your while loop here
+num = 0 
+while (num + 1)**2 < limit :
+    num += 1
+    nearest_square = num**2
+print(nearest_square)
